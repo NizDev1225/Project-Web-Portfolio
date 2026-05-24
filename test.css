@@ -28,7 +28,7 @@ body{
 .hero-right {
     text-align: center;
     flex: 1;
-    background:black; 
+    background:red; 
     background-size: cover;
     background-position: center;
 }
