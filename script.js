@@ -15,3 +15,19 @@ navLinks.forEach(link => {
     hamburger.classList.remove('active');
   });
 });
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1// muncul saat 75% terlihat
+});
+
+// Tambahkan ke semua elemen yang mau dianimasikan
+document.querySelectorAll('.reveal').forEach(el => {
+  observer.observe(el);
+});
