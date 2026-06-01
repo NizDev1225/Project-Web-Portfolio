@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <button class="hamburger" id="hamburger">
+
+      <a href="index.html" class="nav-brand">NizDev</a>
+
+<button class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
         <div class="navbar" id="nav-menu">
-            <a href="index.html" class="tombol">Home</a>
-            <a href="profil.html" class="tombol">Tentang</a>
             <a href="portofolio.html" class="tombol">Portofolio</a>
+            <a href="tentang.html" class="tombol">Tentang</a>
+            
+            <a href="blog.html" class="tombol">Blog</a>
             <a href="kontak.html" class="tombol">Kontak</a>
+            
         </div>
+        
+        
+<a  class="nav-brand"></a>
     </header>
      <section class="hero-kontak">
 <div class="content_hero">
@@ -27,6 +36,57 @@
 <h2>Hubungi Aku</h2>
         </div>
 </section>
+
+<section class="kontak_seksi">
+    <div class="kontak_kiri">
+        <div class="kontak_kiri_p"><p>Jika kamu ingin bekerja sama, memiliki pertanyaan, atau atau hal lain mengenai diriku, silahkan hubungi diriku.</p>
+    </div>
+     <div class="kontak_detail">
+        <div class="kontak_item">
+          <span class="kontak_label">Email</span>
+          <a class="kontak_value">NizDev@gmail.com</a>
+        </div>
+        <div class="kontak_item">
+          <span class="kontak_label">Instagram</span>
+          <a href="https://www.instagram.com/1225official" class="kontak_value">@1225official</a>
+        </div>
+        <div class="kontak_item">
+          <span class="kontak_label">TikTok</span>
+          <a href="https://www.tiktok.com/@nizdev" class="kontak_value">@nizdev</a>
+        </div>
+        <div class="kontak_item">
+          <span class="kontak_label">Nomor Telepon</span>
+          <a class="kontak_value">+62 81927472789</a>
+        </div>
+      </div>
+</div>
+
+
+    <div class="kontak_kanan">
+        <form class="kontak_form" action="https://formspree.io/f/xvzyyjjn" method="POST">
+        <div class="form_row">
+          <input type="text" name="nama" placeholder="Nama" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <textarea name="pesan" placeholder="Pesan" required></textarea>
+        <button type="submit" class="form_submit">Submit</button>
+      </form>
+    </div>
+</section>
+
+
+<footer>
+  <div class="footer_content">
+    <p class="footer_credit">© 2026 NizDev — Roblox Dev & Web Dev</p>
+    <div class="footer_links">
+      <a href="mailto:NizDev1225@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+      <a href="https://github.com/NizDev1225"><i class="fa-brands fa-github"></i>GitHub</a>
+      <a href="https://www.youtube.com/@1225official1"><i class="fa-brands fa-youtube"></i>Youtube</a>
+      <a href="https://www.tiktok.com/@nizdev"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
+      <a href="https://www.instagram.com/1225official"><i class="fa-brands fa-instagram"></i>Instagram</a>
+    </div>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>

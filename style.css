@@ -38,28 +38,29 @@ p, span {
 
 /* ============ Navbar ============ */
 
-header{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    flex-wrap: wrap;
-    width: 100%;
-    animation: fadeIn 0.8s ease forwards;
-    z-index: 9999;
-    backdrop-filter: blur(6.7px);
-    background: linear-gradient(
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: nowrap; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 40px;
+  height: 70px; 
+  animation: fadeIn 0.8s ease forwards;
+  z-index: 9999;
+  backdrop-filter: blur(6.7px);
+  background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.425),
     rgba(250, 248, 248, 0)
   );
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-sizing: border-box; 
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -93,7 +94,7 @@ header{
 
 .hamburger:hover {
   background: rgba(255,255,255,0.1) !important;
-  transform: none !important; /* override hover universal */
+  transform: none !important; 
   filter: none !important;
   box-shadow: none !important;
 }
@@ -121,6 +122,7 @@ header{
   height: 70px;
   width: 100%;
   backdrop-filter: blur(10px);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.26),rgba(0, 0, 0, 0.171));
 }
 
 .navbar a {
@@ -133,13 +135,31 @@ header{
     color: white;
     font-weight: bold;
     transition: 0.6s;
-    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .navbar a:hover {
     transform: scale(1.15);
     background-color: rgba(143, 143, 143, 0.637);
+    border-radius: 32px;
 }
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: 0.3s;
+  white-space: nowrap;
+  width: 100px;
+  z-index: 9191919;
+}
+
+.nav-brand:hover {
+  opacity: 0.7;
+}
+
 
 /* #region Index */
 
@@ -187,7 +207,7 @@ header{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);    
 }
 .sapa h3{
-    color: #9b9b9b;
+    color: #8892b0;
     font-size: 2rem;
     margin: 0;
 
@@ -401,7 +421,7 @@ button a {
 
 .smbut {
     font-size: 1.2rem;
-    color: #b1bde2; 
+    color: #8892b0; 
     letter-spacing: 0.05em;
     margin: 0;
 }
@@ -626,18 +646,19 @@ button a {
 
 /* #endregion */
 
-/*#region Kontak*/
+/*#region Tentang*/
 
-.hero-kontak{
+.hero-tentang{
     background-color: rgb(0, 0, 0);
     min-width: 100vw;
-    min-height: 50vw;
+    min-height: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
     margin-top:0px;
+    gap: 10px;
     overscroll-behavior-block: auto;
     flex-direction: column;
     animation: fadeIn_m 0.8s ease-in-out backwards;
@@ -645,6 +666,51 @@ button a {
 
 .content_hero{
     margin: auto;
+    margin-top: 225px;
+    text-align: center;
+}
+.content_hero h1{
+    margin: auto;
+    text-align: center;
+    font-size: 10rem;
+    color: #8892b0;
+}
+.content_hero h2{
+    margin: auto;
+    text-align: center;
+    font-size: 7rem;
+}
+
+.hero {
+    filter: brightness(0.8) saturate(0.7);
+}
+
+
+
+
+/*#endregion*/
+
+/*#region Kontak*/
+
+.hero-kontak{
+    background-color: rgb(0, 0, 0);
+    min-width: 100vw;
+    min-height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-top:0px;
+    gap: 10px;
+    overscroll-behavior-block: auto;
+    flex-direction: column;
+    animation: fadeIn_m 0.8s ease-in-out backwards;
+}
+
+.content_hero{
+    margin: auto;
+    margin-top: 225px;
     text-align: center;
 }
 .content_hero h1{
@@ -678,6 +744,137 @@ button a {
     transform: translateY(0);
   }
 }
+
+
+/* Kontak Section */
+
+.kontak_seksi{
+    display: flex;
+    overscroll-behavior-block: auto;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+.kontak_kiri{
+    min-width: 600px;
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+    margin-right: 50px;
+}
+
+.kontak_kiri_p{
+    text-align: left;
+    font-size: 2rem;
+    width: 100%;
+    margin: auto;
+}
+
+.kontak_detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: left;
+}
+
+.kontak_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kontak_label {
+    font-size: 1.25rem;
+    color: #8892b0;
+}
+
+.kontak_value {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.kontak_value:hover {
+    color: #5052ff;
+}
+
+
+.kontak_kanan{
+    min-width: 600px;
+    height: 400px;
+    margin: auto;
+    margin-left: 50px;
+    margin-top: 80px;
+
+}
+
+.kontak_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.form_row {
+  display: flex;
+  gap: 12px;
+}
+
+.kontak_form input,
+.kontak_form textarea {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.kontak_form input:focus,
+.kontak_form textarea:focus {
+  outline: none;
+  border-color: #5052ff;;
+}
+
+.kontak_form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.form_submit {
+  background: white !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 16px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: 0.3s !important;
+  margin-top: 0 !important;
+  filter: none !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.form_submit:hover {
+  background: #e0e0e0 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+
+
 
 /*endregion*/
 
@@ -775,21 +972,24 @@ footer {
     display: flex;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 0px;
     z-index: 10000;
   }
 
-  .navbar {
+.navbar {
     position: absolute;
     left: 0;
+    top: 0px;
     width: 100%;
-    min-height: 200px;
-    max-height: 400px;
-    background: rgba(0, 0, 0, 0.95);
+    min-height: 300px;
+    max-height: 2000px;
+    background: rgb(0, 0, 0);
     flex-direction: column;
-    align-items: center;
+
     padding: 20px 0;
     gap: 10px;
+    text-align: left;
+    
 
 
 
@@ -798,10 +998,11 @@ footer {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     display: flex;
+    backdrop-filter: blur(0px);
 
   }
 
-  .navbar.active {
+.navbar.active {
     display: flex;
     opacity: 1;
     pointer-events: all;
@@ -812,13 +1013,40 @@ footer {
 .navbar a{
         min-width: 70px;
         max-width: 70px;
-        padding: 10px 70px;
-        background-color: rgba(110, 110, 110, 0.2);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        position: relative;
+        margin-right: 70%;
+        
+        position:relative;
 
 
     }  
+.tombol1{
+        margin-top: 25px;
+}
+.navbar a {
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+.navbar a:hover {
+    transform: scale(1);
+    background-color: rgba(143, 143, 143, 0);
+    border-radius: 0px;
+    color: #b3b3b3;
+}
+
+header {
+    padding: 0 20px;
+    backdrop-filter: blur(0px);
+    background-image: linear-gradient(to bottom,black,transparent);
+  }
+
+.nav-brand {
+    font-size: 1.25rem;
+  }
+
+
 
 /* #endregion */
 
@@ -840,7 +1068,9 @@ footer {
         background-image: linear-gradient(to bottom ,rgba(0, 0, 0, 0.555),rgba(51, 51, 51, 0.267));
     }
 */
-    /* ============ Gw ============ */
+
+
+/* ============ Gw ============ */
     .hero{
         max-height: 50vw;
         min-height: 100vw;
@@ -1046,8 +1276,8 @@ footer {
 
 .content_hero{
     margin: auto;
+    margin-top: 75px;
     text-align: center;
-    filter: drop-shadow(3px 3px 3px white);
 }
 .content_hero h1{
     margin: auto;
@@ -1080,6 +1310,75 @@ footer {
   }
 }
 
+.kontak_seksi {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+.kontak_kiri{
+    text-align: center;
+    min-width: 200px;
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+    overscroll-behavior-y: auto;
+    
+}
+
+.kontak_kiri_p p{
+    text-align: left;
+    font-size: 1rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+}
+
+.kontak_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.kontak_item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 300px; 
+  margin-top: 20px;
+}
+
+.kontak_label {
+  font-size: .75rem;
+  color: #8892b0;
+}
+
+.kontak_value {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.kontak_value:hover {
+  color: #5052ff;;
+}
+
+.kontak_kanan{
+    min-width: 200px;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 /*#endregion*/
 
 
@@ -1099,6 +1398,9 @@ footer{
 }
 
 /* #endregion */
+
+
+
 
 }
 /* #endregion */
