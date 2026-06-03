@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1// muncul saat 75% terlihat
+  threshold: 0.1 // muncul saat 75% terlihat
 });
 
 // Tambahkan ke semua elemen yang mau dianimasikan
