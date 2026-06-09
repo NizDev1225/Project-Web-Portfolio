@@ -732,7 +732,7 @@ button a {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    width: 675px;
+    min-width: 675px;
 }
 
 .porto{
@@ -2064,9 +2064,83 @@ header {
 
 /*#region Portfolio*/
 
+.portfolio_content_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px 10px;
+    align-content: center;
+    justify-content: center;
+}
+.portfolio_content{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    max-width: 90%;
+    margin: auto;
+    padding: 0px 0px;
+}
+.ap{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    min-width: 200px;
+}
 
+.porto{
+    font-size: 1.25rem;
+    color: #9aade6;
+    margin-top: 10px;
+    text-align: left;
+}
+.portf_post{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    color: white;
+    background: #000000;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    text-align: left;
+}
+.portf_post img{
+    width: 300px;
+    height: 250px;
+    transition: 0.5s;
+    margin: auto;
+}
+.portf_post img:hover{
+    filter: brightness(.8) drop-shadow(0 0 4px rgba(255, 255, 255, 0.747));
+}
+
+.port_text_wrapper{
+    display: flex;
+    gap: 4px;
+}
+.porto_text1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+
+.porto_text1 h3{
+    font-size: 1.25rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 1, 0.9);
+}
+.porto_text1 p{
+    font-size: .8rem;
+    margin-top: 10px;
+}
 
 /*#region Devlog*/
+
 .devlog_post_hero {
     padding: 100px 20px 0;
     }
@@ -2096,6 +2170,15 @@ header {
 
 .devlog_nav_next {
         align-items: flex-start;
+        
+    }
+
+.devlog_nav_label,.devlog_nav_title {
+    font-size: 0.75rem;
+
+    }
+.devlog_nav_next2 {
+    align-items: flex-end;
     }
 /*#endregion*/
 
