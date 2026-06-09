@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-// Tutup menu saat link diklik
+// Close menu pas diklik
 const navLinks = document.querySelectorAll('.navbar a');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -24,10 +24,12 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1 // muncul saat 75% terlihat
+  threshold: 0.1 // ngatur brp persen keliatan dilayar
 });
 
-// Tambahkan ke semua elemen yang mau dianimasikan
+
 document.querySelectorAll('.reveal').forEach(el => {
   observer.observe(el);
 });
+
+
