@@ -1972,13 +1972,32 @@ header {
         height: auto;
     }
     
+    .ts-link{
+        display: flex;
+        gap: 8px;
+        text-align: center;
+        align-items: center;
+        font-size: .8rem;
+        padding: 32px 32px;
+        width: 150px;
+        height: 50px;
+    }
+
     .ts p{
         font-size: .67rem;
         margin: 0;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 1, 0.9);
+        text-align: center;
     }
 
+    .ts{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+    }
+    
     .b_p_list{
         margin-top: 0px;
         max-width: 30px;
