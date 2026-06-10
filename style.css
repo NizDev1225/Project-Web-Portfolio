@@ -1746,8 +1746,56 @@ footer {
 
 /* #endregion */
 
+/*#region Error*/
+
+.error_hero{
+    background-color: rgb(0, 0, 0);
+    min-width: 100vw;
+    min-height: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-top:0px;
+    gap: 10px;
+    overscroll-behavior-block: auto;
+    flex-direction: column;
+    animation: fadeIn_m 0.8s ease-in-out backwards;
+}
+
+.error_hero_content{
+    margin: auto;
+    margin-top: 225px;
+    text-align: center;
+}
+.error_hero_content h1{
+    margin: auto;
+    text-align: center;
+    font-size: 14rem;
+    color: #5d7bff;
+}
+.error_hero_content p{
+    margin: auto;
+    text-align: center;
+    font-size: 7rem;
+}
 
 
+/* #endregion */
+
+/*#region footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/*#endregion */
 
 /*#region Media Query*/
 
@@ -2226,8 +2274,8 @@ header {
 }
 
 .blog_post img{
-    width: 250px;
-    height: 175px;
+    width: 275px;
+    height: 200px;
 }
 .blog_post img:hover{
     filter: brightness(.8) drop-shadow(0 0 4px rgba(255, 255, 255, 0.747));
@@ -2495,7 +2543,41 @@ header {
 
 /*#endregion*/
 
+/*#region error*/
 
+.error_hero{
+    background-color: black;
+    min-width: 100vw;
+    min-height: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-top:0px;
+    overscroll-behavior-block: auto;
+    flex-direction: column;
+    animation: fadeIn_m 0.8s ease-in-out backwards;
+    margin-top: 0px;
+    margin-bottom: 150px;
+}
+
+.error_hero_content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.error_hero h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.error_hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/*#endregion*/
 
 /* #region Footer */
 
